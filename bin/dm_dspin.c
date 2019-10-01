@@ -42,7 +42,9 @@ int main(int argc, char **argv) {
 		return 1; 
 	} else {} 
 
-	printf("%d\n", processor(tree, out, atoi(argv[3]))); 
+	do {
+		if (processor(tree, out, atoi(argv[3]))) break; 
+	} while (1); 
 	return 0; 
 
 } 
