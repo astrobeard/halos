@@ -1,0 +1,504 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "src/objects.h",
+			"settings":
+			{
+				"buffer_size": 69,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/io/columns.h",
+			"settings":
+			{
+				"buffer_size": 76,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 400.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"pus",
+				"Git: Push"
+			],
+			[
+				"com",
+				"Git: Commit"
+			],
+			[
+				"cu",
+				"Git: Add Current File"
+			],
+			[
+				"push",
+				"Git: Push"
+			],
+			[
+				"pull",
+				"Git: Pull"
+			],
+			[
+				"add",
+				"Git: Add..."
+			],
+			[
+				"pu",
+				"Git: Push"
+			],
+			[
+				"COM",
+				"Git: Commit"
+			],
+			[
+				"CU",
+				"Git: Add Current File"
+			],
+			[
+				"co",
+				"Git: Commit"
+			],
+			[
+				"pud",
+				"Plugin Development: Profile Events"
+			],
+			[
+				"package control",
+				"Package Control: Install Package"
+			],
+			[
+				"package cotro",
+				"Package Control: Add Channel"
+			],
+			[
+				"package control: rem",
+				"Package Control: Remove Package"
+			],
+			[
+				"u",
+				"Permute Lines: Unique"
+			],
+			[
+				"Co",
+				"Git: Commit"
+			],
+			[
+				"put",
+				"Git: Push Tags"
+			],
+			[
+				"o",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
+			[
+				"c",
+				"Git: Commit"
+			],
+			[
+				"ccu",
+				"Convert Case: Upper Case"
+			],
+			[
+				"pul",
+				"Git: Pull Current Branch"
+			],
+			[
+				"quick ",
+				"Git: Quick Commit (repo)"
+			],
+			[
+				"git add",
+				"Git: Add Current File"
+			],
+			[
+				"git: ",
+				"Git: Init"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Install Package Control"
+			]
+		],
+		"width": 446.0
+	},
+	"console":
+	{
+		"height": 137.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/astrobeard/Work/Research/VICErepos/VICEbeta/JW19/simulations/simulations.py",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEbeta/JW19/plots/mpl.sr_yields_ssp.py",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEbeta/JW19/plots/plots/Makefile",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEbeta/JW19/plots/mpl.sr_yield_assumptions.py",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEbeta/JW19/plots/mpl.sr_cc_yields.py",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEdev/vice/src/imf.c",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEdev/vice/src/singlezone.c",
+		"/Users/astrobeard/Work/Research/VICErepos/VICE/vice/src/singlezone.c",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEdev/bin/vice",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEdev/vice/core/_pysinglezone.pyx",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEdev/vice/src/agb.c",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEdev/vice/src/io.c",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEdev/vice/yields/agb/_grid_reader.pyx",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEdev/vice/tests/test_agb_yields.py",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEdev/vice/tests/test_cc_yields.py",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEdev/vice/yields/ccsne/WW95/__init__.py",
+		"/Users/astrobeard/Work/Research/VICErepos/VICE/vice/tests/test_cc_yields.py",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEdev/vice/src/numparam.c",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEdev/vice/tests/test_sz_output_mirror.py",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEdev/vice/src/utils.c",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEdev/vice/src/tracer.c",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEdev/vice/src/stats.c",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEdev/vice/src/ssp.c",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEdev/vice/src/sneia.c",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEdev/vice/src/quadrature.c",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEdev/vice/src/objects.h",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEdev/vice/src/multizone.c",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEdev/vice/src/ism.c",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEdev/vice/src/migration.c",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEdev/vice/src/mdf.c",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEdev/vice/src/history.c",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEdev/vice/src/fromfile.c",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEdev/vice/src/element.c",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEdev/vice/src/ccsne.c",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEdev/vice/core/_mirror.pyx",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEdev/vice/src/Makefile",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEdev/vice/core/_pymultizone.pyx",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEdev/vice/src/ccsne.h",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEdev/vice/src/utils.h",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEdev/vice/core/_cutils.pxd",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEdev/vice/core/_pyutils.py",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEdev/vice/yields/ccsne/_yield_integrator.pyx",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEdev/vice/src/imf.h",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEdev/vice/core/_single_stellar_population.pyx",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEdev/vice/src/test.c",
+		"/Users/astrobeard/Work/Research/source/galaxies/APOGEE/mpl.yield_plots.py",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEdev/vice/core/_objects.pxd",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEbeta/JW19/plots/mpl.sro_bursts.py",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEdev/.travis.yml",
+		"/Users/astrobeard/Work/Research/VICErepos/VICE/vice/yields/ccsne/_yield_integrator.pyx",
+		"/Users/astrobeard/Work/Research/source/galaxies/chemev/singlezone/notebooks/isern2019.dat",
+		"/Users/astrobeard/Work/Research/source/galaxies/APOGEE/recent_burst.py",
+		"/Users/astrobeard/Work/Research/source/galaxies/APOGEE/yields.py",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEbeta/JW19/plots/visuals.py",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEdev/vice/yields/ccsne/NKT13/__init__.py",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEdev/vice/core/_builtin_dataframes.py",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEbeta/vice/yields/agb/cristallo11/yield_processor.py",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEbeta/vice/yields/agb/karakas10/processor.py",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEbeta/vice/yields/agb/karakas10/table.dat",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEbeta/vice/yields/ccsne/LC18/table8.dat",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEbeta/vice/yields/ccsne/LC18/yield_processor.py",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEbeta/vice/yields/ccsne/CL13/FeH0/v0/table.dat",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEbeta/vice/yields/ccsne/CL13/processor.py",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEbeta/vice/yields/ccsne/CL04/yields.dat",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEbeta/vice/yields/ccsne/CL04/processor.py",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEbeta/vice/yields/ccsne/WW95/table.dat",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEbeta/vice/yields/ccsne/WW95/processor.py",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEdev/vice/yields/ccsne/Nomoto13/processor.py",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEdev/vice/yields/ccsne/Nomoto13/processor.dat",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEdev/vice/yields/ccsne/Nomoto13/ck13.dat",
+		"/Users/astrobeard/Work/Research/VICErepos/isern2019.dat",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEdev/vice/src/multizone.h",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEdev/vice/src/singlezone.h",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEbeta/JW19/plots/mpl.fiducial_bursts.py",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEbeta/JW19/plots/mpl.fiducial_bursts_sr.py",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEbeta/JW19/plots/mpl.smoothing_time.py",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEbeta/JW19/plots/mpl.schmidt_smoothing.py",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEbeta/JW19/plots/mpl.SFRoscil.py",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEbeta/JW19/plots/mpl.sr_fe_5Gyr_burst.py",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEbeta/JW19/plots/mpl.oscil.py",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEdev/vice/_globals.py",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEdev/vice/_build_utils/_build.py",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEdev/vice/_build_utils/__init__.py",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEdev/vice/__init__.py",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEdev/setup.py",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEbeta/JW19/plots/mpl.SFEoscil.py",
+		"/Users/astrobeard/Work/Research/VICErepos/VICE/setup.py",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEdocs/latex/v1.0.0/science_documentation.tex",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEbeta/JW19/plots/Makefile",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEbeta/vice/core/_single_stellar_population.pyx",
+		"/Users/astrobeard/Work/Research/VICErepos/VICE/vice/core/_single_stellar_population.pyx",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEdev/vice/modeling/parameters/_pyparameter.pyx",
+		"/Users/astrobeard/Work/classes/ISM/Homework3/Makefile",
+		"/Users/astrobeard/Work/classes/ISM/Homework4/Makefile",
+		"/Users/astrobeard/Work/Research/plots/matplotlib_/__init__.py",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEdev/vice/src/sneia.h",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEdev/vice/src/tracer.h",
+		"/Users/astrobeard/Work/Research/source/galaxies/chemev/multizone/UWhydro_disk_models/simulation.py",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEdev/vice/yields/ccsne/LC18/FeH0/v300/al.dat",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEdev/vice/yields/ccsne/CL13/FeH0/v300/al.dat",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEdev/vice/yields/ccsne/CL04/FeH0p15/v0/al.dat",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEdev/vice/yields/ccsne/WW95/FeH0/v0/al.dat",
+		"/Users/astrobeard/Work/Research/VICErepos/test.py",
+		"/Users/astrobeard/Work/Research/source/galaxies/chemev/multizone/simulation.py",
+		"/Users/astrobeard/Work/Research/source/packages/ultra/ultra/visuals/mplsubs.py",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEdev/vice/plotting/utils/__init__.py",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEdev/vice/plotting/utils/mplutils.py",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEdev/vice/plotting/__init__.py",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEdev/vice/plotting/_rcparams.py",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEdev/vice/plotting/plot_tracks.py",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEdev/vice/plotting/utils/__init__.py ",
+		"/Users/astrobeard/Work/Research/source/packages/ultra/ultra/visuals/make_matplotlib_pretty_again.py",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEdev/vice/elements/_elements.py",
+		"/Users/astrobeard/Work/Research/VICErepos/VICE/vice/src/ism.c",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEdev/vice/core/_dataframe.pyx",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEdev/vice/elements/__init__.py",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEdev/vice/elements/elements.py",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEdev/vice/elements.py",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEdev/vice/core/_stats.pxd",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEdev/vice/core/_tracer.pxd",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEdev/vice/src/stats.h",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEdev/vice/src/migration.h",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEdev/vice/core/_multizone.pxd",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEdev/vice/core/_migration.pxd",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEdev/vice/yields/ccsne/_yield_integrator.c",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEdev/vice/src/quadrature.h",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEdev/vice/core/_migration_matrix.pyx",
+		"/Users/astrobeard/Work/Research/VICErepos/VICEdev/vice/core/_singlezone.pxd"
+	],
+	"find":
+	{
+		"height": 38.0
+	},
+	"find_in_files":
+	{
+		"height": 104.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "src/objects.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 69,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								67,
+								67
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 1,
+					"file": "src/io/columns.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 76,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								74,
+								74
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.5,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 98.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git":
+	{
+		"height": 92.0
+	},
+	"pinned_build_system": "",
+	"project": "halos.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/Work/Research/VICErepos/VICEdev/vice/src/mdf.c"
+			],
+			[
+				"us",
+				"~/Work/Research/public/VICE/vice/data/_agb_yields/grid.py"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/Work/Research/VICErepos/VICE.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 1,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
