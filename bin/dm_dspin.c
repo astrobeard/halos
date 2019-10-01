@@ -42,6 +42,7 @@ int main(int argc, char **argv) {
 		return 1; 
 	} else {} 
 
+	printf("Processing: %s....\n", argv[1]); 
 	do {
 		if (processor(tree, out, atoi(argv[3]))) break; 
 	} while (1); 
