@@ -55,11 +55,21 @@ static unsigned short processor(FILE *tree, FILE *out,
 
 	HALO *root = readline(tree, dimension); 
 	HALO *progenitor; 
-	do {
+	do { 
+		/* 
+		 * Read until it reaches the progenitor whose descendant ID matches 
+		 * the z = 0 halo 
+		 */ 
 		progenitor = readline(tree, dimension); 
 		if (progenitor == NULL) return 1; /* no progenitor */ 
 		if ((*progenitor).desc_id != (*root).id) halo_free(progenitor); 
 	} while (progenitor == NULL); 
+
+	while (!(*progenitor).mmp) { 
+		/* keep reading until it reaches the most massive progenitor */ 
+		halo_free(progenitor); 
+		progenitor = readline(tree, dimension); 
+	}
 
 	write_halo(out, root, progenitor); 
 	halo_free(root); 
@@ -180,6 +190,9 @@ static HALO *readline(FILE *tree, const unsigned short dimension) {
 				break; 
 			case SPIN_BULLOCK_COLUMN: 
 				halo -> spin_bullock = dummy; 
+				break; 
+			case MMP_COLUMN: 
+				halo -> mmp = (unsigned short) dummy; 
 				break; 
 			default: 
 				break; 
