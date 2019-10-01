@@ -14,6 +14,9 @@
 #include <stdio.h> 
 #include "../halos.h" 
 
+static unsigned short processor(FILE *tree, FILE *out, 
+	const unsigned short dimension); 
+static void write_halo(FILE *out, HALO *root, HALO *progenitor); 
 static HALO *root(FILE *tree, const unsigned short dimension); 
 static FILE *open_tree_file(char *name); 
 static HALO *readline(FILE *tree, const unsigned short dimension); 
@@ -28,7 +31,7 @@ int main(int argc, char **argv) {
 	if (tree == NULL) {
 		return 1; 
 	} else {} 
-	FILE *out = fopen(argv[2]); 
+	FILE *out = fopen(argv[2], "w"); 
 	if (out == NULL) {
 		fclose(tree); 
 		return 1; 

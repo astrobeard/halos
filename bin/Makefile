@@ -1,11 +1,12 @@
 
 CC = gcc 
+FILES = ../src/*.c ../src/io/*.c 
 
 all: dm_dspin.o 
 .PHONY: clean 
 
 %.o: %.c 
-	$(CC) $< -o $@ 
+	$(CC) $(FILES) $< -o $@ 
 
 clean: 
 	rm -f *.o 
