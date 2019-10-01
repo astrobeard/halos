@@ -1,0 +1,7 @@
+
+*.o 
+*.so
+*.sublime-project 
+*.sublime-workspace 
+
+ 
