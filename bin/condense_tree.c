@@ -56,11 +56,11 @@ int main(int argc, char **argv) {
 	} else {} 
 
 	double minlogm = atof(argv[3]); 
-	// unsigned long n = 0l; 
+	unsigned long n = 0l; 
 	do {
 		if (processor(halo_finder, secondary, out, dimension, minlogm)) break; 
-		// n++; 
-		// printf("\rTrees processed: %ld", n); 
+		n++; 
+		printf("\rTrees processed: %ld", n); 
 	} while (1); 
 	fclose(halo_finder); 
 	fclose(secondary); 
@@ -99,11 +99,14 @@ static unsigned short processor(FILE *halo_finder, FILE *secondary, FILE *out,
 			write_tree_to_output_file(secondary, out); 
 		} else {
 			// printf("skipping....\n"); 
-			next_halo_in_tree(secondary); /* skip this halo */ 
+			if (next_halo_in_tree(secondary)) {
+				halo_free(halo); 
+				return 1; 	
+			} else {} 
 		} 
-		/* move halo finder passed this tree */ 
-		next_halo_in_tree(halo_finder); 
+		/* move halo finder passed this tree */  
 		halo_free(halo); 
+		if (next_halo_in_tree(halo_finder)) return 1; 
 		return 0; 
 	} else {
 		return 1; 
