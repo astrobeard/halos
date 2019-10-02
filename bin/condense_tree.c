@@ -86,7 +86,7 @@ static unsigned short processor(FILE *halo_finder, FILE *secondary, FILE *out,
 
 	HALO *halo = next_present_day_halo(halo_finder, dimension); 
 	if (halo != NULL) {
-		printf("log10(mvir) = %.2f\n", log10((*halo).mvir)); 
+		printf("log10(mvir) = %.2f", log10((*halo).mvir)); 
 		if (log10((*halo).mvir >= minlogm)) { 
 			write_tree_to_output_file(secondary, out); 
 		} else {
@@ -95,6 +95,7 @@ static unsigned short processor(FILE *halo_finder, FILE *secondary, FILE *out,
 		/* move halo finder passed this tree */ 
 		next_halo_in_tree(halo_finder); 
 		halo_free(halo); 
+		printf("passed\n"); 
 		return 1; 
 	} else {
 		return 0; 
