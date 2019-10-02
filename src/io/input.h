@@ -59,6 +59,22 @@ extern unsigned short catalogue_close_file(CATALOGUE *catalogue);
 extern unsigned short next_halo_in_tree(FILE *tree); 
 
 /* 
+ * Determines if a given string starts with some test string 
+ * 
+ * Parameters 
+ * ========== 
+ * str: 		The string to test 
+ * test: 		The test string 
+ * 
+ * Returns 
+ * ======= 
+ * 1 if the beginning of the string str is identical to test, 0 if not 
+ * 
+ * source: input.c 
+ */ 
+extern unsigned short startswith(const char *str, const char *test); 
+
+/* 
  * Determine the length of the header at the top of a data file assuming all 
  * header lines begin with #. 
  * 

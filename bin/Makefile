@@ -1,9 +1,9 @@
 
 CC = gcc 
-CFLAGS = -Wsign-conversion -Wsign-compare 
+CFLAGS = -lm -Wsign-conversion -Wsign-compare 
 FILES = ../src/*.c ../src/io/*.c ../src/statistics/*.c 
 
-all: dm_dspin.o 
+all: dm_dspin.o condense_tree.o 
 .PHONY: clean 
 
 %.o: %.c 

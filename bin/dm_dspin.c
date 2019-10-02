@@ -62,7 +62,7 @@ static unsigned short processor(FILE *tree, FILE *out,
 		 */ 
 		progenitor = readline(tree, dimension); 
 		if (progenitor == NULL) return 1; /* no progenitor */ 
-		if ((*progenitor).desc_id != (*root).id) halo_free(progenitor); 
+		if ((*progenitor).desc_id != (signed) (*root).id) halo_free(progenitor); 
 	} while (progenitor == NULL); 
 
 	while (!(*progenitor).mmp) { 
@@ -156,7 +156,7 @@ static HALO *readline(FILE *tree, const unsigned short dimension) {
 				halo -> scale = dummy; 
 				break; 
 			case ID_COLUMN: 
-				halo -> id = (long) dummy; 
+				halo -> id = (unsigned long) dummy; 
 				break; 
 			case DESC_ID_COLUMN: 
 				halo -> desc_id = (long) dummy; 

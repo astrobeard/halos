@@ -8,8 +8,6 @@
 #include <ctype.h> 
 #include "input.h" 
 
-static unsigned short startswith(const char *str, const char *test); 
-
 /* 
  * Open a halo catalogue's associated file 
  * 
@@ -89,11 +87,9 @@ extern unsigned short next_halo_in_tree(FILE *tree) {
  * ======= 
  * 1 if the beginning of the string str is identical to test, 0 if not 
  * 
- * Notes 
- * ===== 
- * Subroutine of next_halo_in_tree; potentially moving to another location 
+ * header: input.h 
  */ 
-static unsigned short startswith(const char *str, const char *test) {
+extern unsigned short startswith(const char *str, const char *test) {
 
 	unsigned long i; 
 	for (i = 0l; i < strlen(test); i++) {
@@ -124,8 +120,8 @@ extern int header_length(char *file) {
 	if (in == NULL) return -1; 
 
 	/* Store a line in memory, check for error reading the first line */  
-	char *line = (char *) malloc (LINESIZE * sizeof(char)); 
-	if (fgets(line, LINESIZE, in) == NULL) { 
+	char *line = (char *) malloc (MAX_LINESIZE * sizeof(char)); 
+	if (fgets(line, MAX_LINESIZE, in) == NULL) { 
 		fclose(in); 
 		free(line); 
 		return -1; 
@@ -135,7 +131,7 @@ extern int header_length(char *file) {
 	int n = 0; 
 	while (line[0] == '#') { 
 		n++; 
-		if (fgets(line, LINESIZE, in) == NULL) {
+		if (fgets(line, MAX_LINESIZE, in) == NULL) {
 			fclose(in); 
 			free(line); 
 			return -1; 
@@ -182,9 +178,9 @@ extern int file_dimension(char *file) {
 	 * taken care of by reading and extra 2 lines passed the header. 
 	 */ 
 	int i; 
-	char *line = (char *) malloc (LINESIZE * sizeof(char)); 
+	char *line = (char *) malloc (MAX_LINESIZE * sizeof(char)); 
 	for (i = 0; i <= hlen + 2; i++) {
-		if (fgets(line, LINESIZE, in) == NULL) { 
+		if (fgets(line, MAX_LINESIZE, in) == NULL) { 
 			fclose(in); 
 			free(line); 
 			return -1; 				/* error checking */ 
