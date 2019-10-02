@@ -167,7 +167,7 @@ static HALO *next_present_day_halo(FILE *in, unsigned short dimension) {
 		return NULL; 
 	} else {
 		halo -> id = (unsigned long) line[ID_COLUMN]; 
-		halo -> mvir = (double) line[MVIR_COOLUMN]; 
+		halo -> mvir = (double) line[MVIR_COLUMN]; 
 		free(line); 
 		return halo; 
 	}
