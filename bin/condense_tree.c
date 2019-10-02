@@ -56,11 +56,11 @@ int main(int argc, char **argv) {
 	} else {} 
 
 	double minlogm = atof(argv[3]); 
-	unsigned long n = 0l; 
+	// unsigned long n = 0l; 
 	do {
 		if (processor(halo_finder, secondary, out, dimension, minlogm)) break; 
-		n++; 
-		printf("\rTrees processed: %ld", n); 
+		// n++; 
+		// printf("\rTrees processed: %ld", n); 
 	} while (1); 
 	fclose(halo_finder); 
 	fclose(secondary); 
@@ -92,6 +92,7 @@ static unsigned short processor(FILE *halo_finder, FILE *secondary, FILE *out,
 	HALO *halo = next_present_day_halo(halo_finder, dimension); 
 	if (halo != NULL) { 
 		// printf("log10(mvir) = %.2f ", log10((*halo).mvir)); 
+		printf("\r%ld\n", (*halo).id); 
 		if (log10((*halo).mvir) >= minlogm) { 
 			// printf("writing....\n"); 
 			fprintf(out, "#tree %ld\n", (*halo).id); 
