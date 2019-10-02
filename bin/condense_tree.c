@@ -94,7 +94,7 @@ static unsigned short processor(FILE *halo_finder, FILE *secondary, FILE *out,
 		// printf("log10(mvir) = %.2f ", log10((*halo).mvir)); 
 		if (log10((*halo).mvir) >= minlogm) { 
 			// printf("writing....\n"); 
-			fprintf("#tree %ld\n", (*halo).id); 
+			fprintf(out, "#tree %ld\n", (*halo).id); 
 			write_tree_to_output_file(secondary, out); 
 		} else {
 			// printf("skipping....\n"); 
