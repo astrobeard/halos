@@ -56,7 +56,6 @@ int main(int argc, char **argv) {
 	} else {} 
 
 	double minlogm = atof(argv[3]); 
-	printf("minlogm = %lf\n", minlogm); 
 	do {
 		if (processor(halo_finder, secondary, out, dimension, minlogm)) break; 
 	} while (1); 
