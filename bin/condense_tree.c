@@ -56,6 +56,7 @@ int main(int argc, char **argv) {
 	} else {} 
 
 	double minlogm = atof(argv[3]); 
+	printf("Condensing: %s....\n", argv[1]); 
 	do {
 		if (processor(halo_finder, secondary, out, dimension, minlogm)) break; 
 	} while (1); 
