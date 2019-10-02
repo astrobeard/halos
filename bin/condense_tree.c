@@ -29,7 +29,7 @@ static HALO *next_present_day_halo(FILE *in, unsigned short dimension);
 int main(int argc, char **argv) {
 
 	if (argc != 4) {
-		printf("Incorrect number of command line arguments. Expected: 3"); 
+		printf("Incorrect number of command line arguments. Expected: 3. "); 
 		printf("Got: %d\n", argc - 1); 
 		return 1; 
 	} else {} 
