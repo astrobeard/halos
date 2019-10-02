@@ -56,7 +56,9 @@ int main(int argc, char **argv) {
 	} else {} 
 
 	double minlogm = atof(argv[3]); 
-	while (processor(halo_finder, secondary, out, dimension, minlogm)) continue; 
+	do {
+		if (processor(halo_finder, secondary, out, dimension, minlogm)) break; 
+	} while (1); 
 	fclose(halo_finder); 
 	fclose(secondary); 
 	fclose(out); 
@@ -79,26 +81,27 @@ int main(int argc, char **argv) {
  * 
  * Returns 
  * ======= 
- * 1 if the program should continue reading the file, 0 at EOF 
+ * 0 if the program should continue reading the file, 1 at EOF 
  */ 
 static unsigned short processor(FILE *halo_finder, FILE *secondary, FILE *out, 
 	unsigned short dimension, double minlogm) {
 
 	HALO *halo = next_present_day_halo(halo_finder, dimension); 
 	if (halo != NULL) {
-		printf("log10(mvir) = %.2f", log10((*halo).mvir)); 
+		printf("log10(mvir) = %.2f ", log10((*halo).mvir)); 
 		if (log10((*halo).mvir >= minlogm)) { 
+			printf("writing....\n"); 
 			write_tree_to_output_file(secondary, out); 
 		} else {
+			printf("skipping....\n"); 
 			next_halo_in_tree(secondary); /* skip this halo */ 
 		} 
 		/* move halo finder passed this tree */ 
 		next_halo_in_tree(halo_finder); 
 		halo_free(halo); 
-		printf("passed\n"); 
-		return 1; 
-	} else {
 		return 0; 
+	} else {
+		return 1; 
 	} 
 
 }
