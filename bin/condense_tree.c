@@ -163,6 +163,7 @@ static HALO *next_present_day_halo(FILE *in, unsigned short dimension) {
 	// 		return NULL; 
 	// 	} else {} 
 	// } 
+	free(line); 
 	halo -> id = (unsigned long) line[ID_COLUMN]; 
 	halo -> mvir = (long) line[MVIR_COLUMN]; 
 	return halo; 
