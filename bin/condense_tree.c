@@ -92,7 +92,7 @@ static unsigned short processor(FILE *halo_finder, FILE *secondary, FILE *out,
 	HALO *halo = next_present_day_halo(halo_finder, dimension); 
 	if (halo != NULL) { 
 		// printf("log10(mvir) = %.2f ", log10((*halo).mvir)); 
-		printf("\r%ld\n", (*halo).id); 
+		// printf("\r%ld\n", (*halo).id); 
 		if (log10((*halo).mvir) >= minlogm) { 
 			// printf("writing....\n"); 
 			fprintf(out, "#tree %ld\n", (*halo).id); 
@@ -157,14 +157,14 @@ static HALO *next_present_day_halo(FILE *in, unsigned short dimension) {
 
 	HALO *halo = halo_initialize(); 
 	double *line = read_line(in, dimension); 
-	// while (line[SCALE_COLUMN] != 1) {
-	// 	free(line); 
-	// 	line = read_line(in, dimension); 
-	// 	if (line == NULL) {
-	// 		halo_free(halo); 
-	// 		return NULL; 
-	// 	} else {} 
-	// }
+	while (line[SCALE_COLUMN] != 1) {
+		free(line); 
+		line = read_line(in, dimension); 
+		if (line == NULL) {
+			halo_free(halo); 
+			return NULL; 
+		} else {} 
+	}
 	if (line == NULL) {
 		halo_free(halo); 
 		return NULL; 
