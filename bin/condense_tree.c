@@ -154,19 +154,23 @@ static HALO *next_present_day_halo(FILE *in, unsigned short dimension) {
 
 	HALO *halo = halo_initialize(); 
 	double *line = read_line(in, dimension); 
-	// while (line[SCALE_COLUMN] != 1) {
-	// 	free(line); 
-	// 	line = read_line(in, dimension); 
-	// 	if (line == NULL) {
-	// 		free(line); 
-	// 		halo_free(halo); 
-	// 		return NULL; 
-	// 	} else {} 
-	// } 
-	halo -> id = (unsigned long) line[ID_COLUMN]; 
-	halo -> mvir = (long) line[MVIR_COLUMN]; 
-	free(line); 
-	return halo; 
+	while (line[SCALE_COLUMN] != 1) {
+		free(line); 
+		line = read_line(in, dimension); 
+		if (line == NULL) {
+			halo_free(halo); 
+			return NULL; 
+		} else {} 
+	}
+	if (line == NULL) {
+		halo_free(halo); 
+		return NULL; 
+	} else {
+		halo -> id = (unsigned long) line[ID_COLUMN]; 
+		halo -> mvir = (double) line[MVIR_COOLUMN]; 
+		free(line); 
+		return halo; 
+	}
 
 }
 
