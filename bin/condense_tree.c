@@ -60,7 +60,7 @@ int main(int argc, char **argv) {
 	do {
 		if (processor(halo_finder, secondary, out, dimension, minlogm)) break; 
 		n++; 
-		printf("\rTrees processed: %ld\n", n); 
+		printf("\rTrees processed: %ld", n); 
 	} while (1); 
 	fclose(halo_finder); 
 	fclose(secondary); 
