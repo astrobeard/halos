@@ -11,6 +11,7 @@ extern "C" {
 #include "src/halo.h" 
 #include "src/io/columns.h" 
 #include "src/io/input.h" 
+#include "src/statistics/utils.h" 
 
 #ifdef __cplusplus 
 } 

@@ -58,6 +58,55 @@ extern unsigned short catalogue_close_file(CATALOGUE *catalogue);
  */ 
 extern unsigned short next_halo_in_tree(FILE *tree); 
 
+/* 
+ * Determine the length of the header at the top of a data file assuming all 
+ * header lines begin with #. 
+ * 
+ * Parameters 
+ * ========== 
+ * file: 	The name of the file 
+ * 
+ * Returns 
+ * ======= 
+ * The length of the header; -1 on failure to read from the file. 
+ * 
+ * source: input.c 
+ */ 
+extern int header_length(char *file); 
+
+/* 
+ * Determine the dimensionality of a data file off of the first line passed the 
+ * header, assuming the header is commented out with '#'. 
+ * 
+ * Parameters 
+ * ========== 
+ * file: 		The file to determine the dimensionality of 
+ * 
+ * Returns 
+ * ======= 
+ * The number of quantities on one line of the file. -1 on failure to read 
+ * from the file 
+ * 
+ * source: input.c 
+ */ 
+extern int file_dimension(char *file); 
+
+/* 
+ * Read a line of data from a file of given dimension from disk memory 
+ * 
+ * Parameters 
+ * ========== 
+ * input: 		The input filestream 
+ * dimension: 	The dimensionality of the file 
+ * 
+ * Returns 
+ * ======= 
+ * The next line of data from wherever the input stream is. NULL on EOF 
+ * 
+ * source: input.c 
+ */ 
+extern double *read_line(FILE *input, unsigned int dimension); 
+
 #ifdef __cplusplus 
 } 
 #endif /* __cplusplus */ 

@@ -1,6 +1,6 @@
 
 CC = gcc 
-CFLAGS = -c -fPIC 
+CFLAGS = -c -fPIC -Wsign-conversion -Wsign-compare 
 
 all: input.o 
 .PHONY: clean 
