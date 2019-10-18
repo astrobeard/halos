@@ -82,14 +82,23 @@ static void write_halo(FILE *out, HALO *root, HALO *progenitor) {
 
 	fprintf(out, "%ld\t", (*root).id); 
 	fprintf(out, "%ld\t", (*root).pid); 
+	fprintf(out, "%.5e\t", (*root).sam_mvir); 
 	fprintf(out, "%.5e\t", (*root).sam_mvir - (*progenitor).sam_mvir); 
+	fprintf(out, "%.5e\t", (*root).mvir); 
 	fprintf(out, "%.5e\t", (*root).mvir - (*progenitor).mvir); 
+	fprintf(out, "%.5e\t", (*root).mmvir_all); 
 	fprintf(out, "%.5e\t", (*root).mmvir_all - (*progenitor).mmvir_all); 
+	fprintf(out, "%.5e\t", (*root).m200b); 
 	fprintf(out, "%.5e\t", (*root).m200b - (*progenitor).m200b); 
+	fprintf(out, "%.5e\t", (*root).m200c); 
 	fprintf(out, "%.5e\t", (*root).m200c - (*progenitor).m200c); 
+	fprintf(out, "%.5e\t", (*root).m500c); 
 	fprintf(out, "%.5e\t", (*root).m500c - (*progenitor).m500c); 
+	fprintf(out, "%.5e\t", (*root).m2500c); 
 	fprintf(out, "%.5e\t", (*root).m2500c - (*progenitor).m2500c); 
+	fprintf(out, "%.5e\t", (*root).spin); 
 	fprintf(out, "%.5e\t", (*root).spin - (*progenitor).spin); 
+	fprintf(out, "%.5e\t", (*root).spin_bullock); 
 	fprintf(out, "%.5e\t", (*root).spin_bullock - (*progenitor).spin_bullock); 
 	fprintf(out, "\n"); 
 
