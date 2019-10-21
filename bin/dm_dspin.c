@@ -65,31 +65,31 @@ static unsigned short processor(FILE *tree, FILE *out,
 		progenitor = readline(tree, dimension); 
 		if (progenitor == NULL) return 1; /* no progenitor */ 
 		printf("1\n"); 
-		if ((*progenitor).desc_id > 0) {
-			if ( (unsigned) (*progenitor).desc_id != (*root).id) {
-				printf("progenitor.desc_id = %ld\n", (*progenitor).desc_id); 
-				printf("root.id = %ld\n", (*root).id); 
-				printf("(unsigned) progenitor.desc_id = %ld\n", 
-					(unsigned) (*progenitor).desc_id); 
-				printf("(signed) root.id = %ld\n", (signed) (*root).id); 
-				printf("Test 1: %d\n", 
-					(unsigned) (*progenitor).desc_id == (*root).id); 
-				printf("Test 2: %d\n", 
-					(*progenitor).desc_id == (signed) (*root).id); 
-				printf("Test 3: %d\n", 
-					(*progenitor).desc_id == (*root).id); 
-				printf("a\n"); 
-				halo_free(progenitor); 
-				printf("b\n"); 
-			} else {} 
-		} else {} 
-		// if ((*progenitor).desc_id != (signed) (*root).id) {
-		// 	printf("progenitor.desc_id = %ld\n", (*progenitor).desc_id); 
-		// 	printf("root.id = %ld\n", (*root).id); 
-		// 	printf("a\n"); 
-		// 	halo_free(progenitor); 
-		// 	printf("b\n"); 
+		// if ((*progenitor).desc_id > 0) {
+		// 	if ( (unsigned) (*progenitor).desc_id != (*root).id) {
+		// 		printf("progenitor.desc_id = %ld\n", (*progenitor).desc_id); 
+		// 		printf("root.id = %ld\n", (*root).id); 
+		// 		printf("(unsigned) progenitor.desc_id = %ld\n", 
+		// 			(unsigned) (*progenitor).desc_id); 
+		// 		printf("(signed) root.id = %ld\n", (signed) (*root).id); 
+		// 		printf("Test 1: %d\n", 
+		// 			(unsigned) (*progenitor).desc_id == (*root).id); 
+		// 		printf("Test 2: %d\n", 
+		// 			(*progenitor).desc_id == (signed) (*root).id); 
+		// 		printf("Test 3: %d\n", 
+		// 			(*progenitor).desc_id == (*root).id); 
+		// 		printf("a\n"); 
+		// 		halo_free(progenitor); 
+		// 		printf("b\n"); 
+		// 	} else {} 
 		// } else {} 
+		if ((*progenitor).desc_id != (*root).id) {
+			printf("progenitor.desc_id = %ld\n", (*progenitor).desc_id); 
+			printf("root.id = %ld\n", (*root).id); 
+			printf("a\n"); 
+			halo_free(progenitor); 
+			printf("b\n"); 
+		} else {} 
 		printf("2\n"); 
 	} while (progenitor == NULL); 
 
@@ -245,4 +245,3 @@ static HALO *readline(FILE *tree, const unsigned short dimension) {
 	return halo; 
 
 } 
-
