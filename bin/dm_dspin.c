@@ -69,6 +69,9 @@ static unsigned short processor(FILE *tree, FILE *out,
 			if ( (unsigned) (*progenitor).desc_id != (*root).id) {
 				printf("progenitor.desc_id = %ld\n", (*progenitor).desc_id); 
 				printf("root.id = %ld\n", (*root).id); 
+				printf("(unsigned) progenitor.desc_id = %ld\n", 
+					(unsigned) (*progenitor).desc_id); 
+				printf("(signed) root.id = %ld\n", (signed) (*root).id); 
 				printf("Test 1: %d\n", 
 					(unsigned) (*progenitor).desc_id == (*root).id); 
 				printf("Test 2: %d\n", 
