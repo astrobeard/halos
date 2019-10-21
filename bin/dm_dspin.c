@@ -64,18 +64,25 @@ static unsigned short processor(FILE *tree, FILE *out,
 		 */ 
 		progenitor = readline(tree, dimension); 
 		if (progenitor == NULL) return 1; /* no progenitor */ 
+		printf("a\n"); 
 		if ((*progenitor).desc_id != (signed) (*root).id) halo_free(progenitor); 
+		printf("b\n"); 
 	} while (progenitor == NULL); 
 
 	while (!(*progenitor).mmp) { 
 		/* keep reading until it reaches the most massive progenitor */ 
+		printf("c\n"); 
 		halo_free(progenitor); 
+		printf("d\n"); 
 		progenitor = readline(tree, dimension); 
 	}
 
 	if (log10((*root).mvir) > minlogm) write_halo(out, root, progenitor); 
+	printf("e\n"); 
 	halo_free(root); 
+	printf("f\n"); 
 	halo_free(progenitor); 
+	printf("g\n"); 
 	return next_halo_in_tree(tree); 
 
 } 
