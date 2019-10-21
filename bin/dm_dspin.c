@@ -84,29 +84,19 @@ static unsigned short processor(FILE *tree, FILE *out,
 		// 	} else {} 
 		// } else {} 
 		if ((*progenitor).desc_id != (*root).id) {
-			printf("progenitor.desc_id = %ld\n", (*progenitor).desc_id); 
-			printf("root.id = %ld\n", (*root).id); 
-			printf("a\n"); 
 			halo_free(progenitor); 
-			printf("b\n"); 
 		} else {} 
-		printf("2\n"); 
 	} while (progenitor == NULL); 
 
 	while (!(*progenitor).mmp) { 
 		/* keep reading until it reaches the most massive progenitor */ 
-		printf("c\n"); 
 		halo_free(progenitor); 
-		printf("d\n"); 
 		progenitor = readline(tree, dimension); 
 	}
 
 	if (log10((*root).mvir) > minlogm) write_halo(out, root, progenitor); 
-	printf("e\n"); 
 	halo_free(root); 
-	printf("f\n"); 
 	halo_free(progenitor); 
-	printf("g\n"); 
 	return next_halo_in_tree(tree); 
 
 } 
