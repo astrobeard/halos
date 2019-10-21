@@ -7,15 +7,17 @@
  * 1) 	The name of the input tree file 
  * 2) 	The name of the output file 
  * 3) 	The dimensionality of the tree file 
+ * 4) 	The minimum log10 halo mass 
  */ 
 
 #include <stdlib.h> 
 #include <string.h> 
 #include <stdio.h> 
+#include <math.h> 
 #include "../halos.h" 
 
 static unsigned short processor(FILE *tree, FILE *out, 
-	const unsigned short dimension); 
+	const unsigned short dimension, double minlogm); 
 static void write_halo(FILE *out, HALO *root, HALO *progenitor); 
 static HALO *root(FILE *tree, const unsigned short dimension); 
 static FILE *open_tree_file(char *name); 
@@ -23,8 +25,8 @@ static HALO *readline(FILE *tree, const unsigned short dimension);
 
 int main(int argc, char **argv) {
 
-	if (argc != 4) {
-		printf("Expected 3 command line arguments. Got: %d\n", argc); 
+	if (argc != 5) {
+		printf("Expected 4 command line arguments. Got: %d\n", argc - 1); 
 		return 1; 
 	} else {} 
 	FILE *tree = open_tree_file(argv[1]); 
@@ -44,14 +46,14 @@ int main(int argc, char **argv) {
 
 	printf("Processing: %s....\n", argv[1]); 
 	do {
-		if (processor(tree, out, atoi(argv[3]))) break; 
+		if (processor(tree, out, atoi(argv[3]), atof(argv[4]))) break; 
 	} while (1); 
 	return 0; 
 
 } 
 
 static unsigned short processor(FILE *tree, FILE *out, 
-	const unsigned short dimension) {
+	const unsigned short dimension, double minlogm) {
 
 	HALO *root = readline(tree, dimension); 
 	HALO *progenitor; 
@@ -71,7 +73,7 @@ static unsigned short processor(FILE *tree, FILE *out,
 		progenitor = readline(tree, dimension); 
 	}
 
-	write_halo(out, root, progenitor); 
+	if (log10((*root).mvir) > minlogm) write_halo(out, root, progenitor); 
 	halo_free(root); 
 	halo_free(progenitor); 
 	return next_halo_in_tree(tree); 
