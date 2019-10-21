@@ -64,7 +64,6 @@ static unsigned short processor(FILE *tree, FILE *out,
 		 */ 
 		progenitor = readline(tree, dimension); 
 		if (progenitor == NULL) return 1; /* no progenitor */ 
-		printf("1\n"); 
 		// if ((*progenitor).desc_id > 0) {
 		// 	if ( (unsigned) (*progenitor).desc_id != (*root).id) {
 		// 		printf("progenitor.desc_id = %ld\n", (*progenitor).desc_id); 
