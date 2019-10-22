@@ -82,7 +82,7 @@ if __name__ == "__main__":
 			"All Haloes"]
 	for i in range(len(colors)): 
 		if i == 2: 
-			nbins = 100 
+			nbins = 50 
 		else: 
 			nbins = 100 
 		x, y, low, high = mass_range(data, [11.9, 12.9, 13.9, 1][i], 
@@ -103,5 +103,5 @@ if __name__ == "__main__":
 		frameon = False, handlelength = 0, fontsize = 20) 
 	for i in range(4): 
 		leg.get_texts()[i].set_color(colors[i]) 
-
-
+	plt.tight_layout() 
+	plt.savefig("dm_dspin.pdf") 
