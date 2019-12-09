@@ -3,5 +3,6 @@
 *.so
 *.sublime-project 
 *.sublime-workspace 
+*-checkpoints.ipynb
 
  
