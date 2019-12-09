@@ -64,27 +64,7 @@ static unsigned short processor(FILE *tree, FILE *out,
 		 */ 
 		progenitor = readline(tree, dimension); 
 		if (progenitor == NULL) return 1; /* no progenitor */ 
-		// if ((*progenitor).desc_id > 0) {
-		// 	if ( (unsigned) (*progenitor).desc_id != (*root).id) {
-		// 		printf("progenitor.desc_id = %ld\n", (*progenitor).desc_id); 
-		// 		printf("root.id = %ld\n", (*root).id); 
-		// 		printf("(unsigned) progenitor.desc_id = %ld\n", 
-		// 			(unsigned) (*progenitor).desc_id); 
-		// 		printf("(signed) root.id = %ld\n", (signed) (*root).id); 
-		// 		printf("Test 1: %d\n", 
-		// 			(unsigned) (*progenitor).desc_id == (*root).id); 
-		// 		printf("Test 2: %d\n", 
-		// 			(*progenitor).desc_id == (signed) (*root).id); 
-		// 		printf("Test 3: %d\n", 
-		// 			(*progenitor).desc_id == (*root).id); 
-		// 		printf("a\n"); 
-		// 		halo_free(progenitor); 
-		// 		printf("b\n"); 
-		// 	} else {} 
-		// } else {} 
-		if ((*progenitor).desc_id != (*root).id) {
-			halo_free(progenitor); 
-		} else {} 
+		if ((*progenitor).desc_id != (*root).id) halo_free(progenitor); 
 	} while (progenitor == NULL); 
 
 	while (!(*progenitor).mmp) { 
@@ -104,20 +84,15 @@ static void write_halo(FILE *out, HALO *root, HALO *progenitor) {
 
 	fprintf(out, "%ld\t", (*root).id); 
 	fprintf(out, "%ld\t", (*root).pid); 
-	fprintf(out, "%.5e\t", (*root).sam_mvir); 
-	fprintf(out, "%.5e\t", (*root).sam_mvir - (*progenitor).sam_mvir); 
 	fprintf(out, "%.5e\t", (*root).mvir); 
 	fprintf(out, "%.5e\t", (*root).mvir - (*progenitor).mvir); 
-	fprintf(out, "%.5e\t", (*root).mmvir_all); 
-	fprintf(out, "%.5e\t", (*root).mmvir_all - (*progenitor).mmvir_all); 
-	fprintf(out, "%.5e\t", (*root).m200b); 
-	fprintf(out, "%.5e\t", (*root).m200b - (*progenitor).m200b); 
-	fprintf(out, "%.5e\t", (*root).m200c); 
-	fprintf(out, "%.5e\t", (*root).m200c - (*progenitor).m200c); 
-	fprintf(out, "%.5e\t", (*root).m500c); 
-	fprintf(out, "%.5e\t", (*root).m500c - (*progenitor).m500c); 
-	fprintf(out, "%.5e\t", (*root).m2500c); 
-	fprintf(out, "%.5e\t", (*root).m2500c - (*progenitor).m2500c); 
+	fprintf(out, "%.5e\t", (*root).rvir / (*root).rs); 
+	fprintf(out, "%.5e\t", (*root).rvir / (*root).rs - 
+		(*progenitor).rvir / (*progenitor).rs); 
+	fprintf(out, "%.5e\t", (*root).b_to_a); 
+	fprintf(out, "%.5e\t", (*root).b_to_a - (*progenitor).b_to_a); 
+	fprintf(out, "%.5e\t", (*root).c_to_a); 
+	fprintf(out, "%.5e\t", (*root).c_to_a - (*progenitor).c_to_a); 
 	fprintf(out, "%.5e\t", (*root).spin); 
 	fprintf(out, "%.5e\t", (*root).spin - (*progenitor).spin); 
 	fprintf(out, "%.5e\t", (*root).spin_bullock); 
@@ -195,32 +170,26 @@ static HALO *readline(FILE *tree, const unsigned short dimension) {
 			case PID_COLUMN: 
 				halo -> pid = (long) dummy; 
 				break; 
-			case SAM_MVIR_COLUMN: 
-				halo -> sam_mvir = dummy; 
-				break; 
 			case MVIR_COLUMN: 
 				halo -> mvir = dummy; 
 				break; 
 			case SPIN_COLUMN: 
 				halo -> spin = dummy; 
 				break; 
-			case MMVIR_ALL_COLUMN: 
-				halo -> mmvir_all = dummy; 
-				break; 
-			case M200B_COLUMN: 
-				halo -> m200b = dummy; 
-				break; 
-			case M200C_COLUMN: 
-				halo -> m200c = dummy; 
-				break; 
-			case M500C_COLUMN: 
-				halo -> m500c = dummy; 
-				break; 
-			case M2500C_COLUMN: 
-				halo -> m2500c = dummy; 
-				break; 
 			case SPIN_BULLOCK_COLUMN: 
 				halo -> spin_bullock = dummy; 
+				break; 
+			case RS_COLUMN: 
+				halo -> rs = dummy; 
+				break; 
+			case RVIR_COLUMN: 
+				halo -> rvir = dummy; 
+				break; 
+			case B_TO_A_COLUMN: 
+				halo -> b_to_a = dummy; 
+				break; 
+			case C_TO_A_COLUMN: 
+				halo -> c_to_a = dummy; 
 				break; 
 			case MMP_COLUMN: 
 				halo -> mmp = (unsigned short) dummy; 
