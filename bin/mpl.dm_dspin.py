@@ -28,7 +28,7 @@ dca_over_ca = N * [0]
 n = 0
 for i in DATA: 
 	for j in i: 
-		masses = j[2] 
+		masses[n] = j[2] 
 		dm_over_m[n] = j[3] / j[2] 
 		dspin_over_spin[n] = j[-1] / j[-2] 
 		dcvir_over_cvir[n] = j[5] / j[4] 
