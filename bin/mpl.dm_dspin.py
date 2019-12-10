@@ -74,7 +74,7 @@ def mass_range(data, minlogm, maxlogm, xcol, nbins = 100):
 	low = len(ordered) * [0] 
 	high = len(ordered) * [0] 
 	for i in range(len(ordered)): 
-		x[i], y[i], low[i], high[i] = analyze(ordered[i]) 
+		x[i], y[i], low[i], high[i] = analyze(ordered[i], xcol) 
 	return [x, y, low, high] 
 
 
