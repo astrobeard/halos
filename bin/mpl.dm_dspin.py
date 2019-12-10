@@ -96,6 +96,7 @@ def setup_axes():
 		axes[i].plot(2 * [0], ylim, linestyle = ':', 
 			c = plots.mpltoolkit.named_colors()["black"]) 
 	axes[0].set_ylabel(r"$\Delta\lambda/\lambda$") 
+	axes[2].xaxis.set_ticks([-0.8, -0.6, -0.4, -0.2, 0.0, 0.2, 0.4])
 	for i in range(1, len(axes)): 
 		plt.setp(axes[i].get_yticklabels(), visible = False) 
 	return axes 
