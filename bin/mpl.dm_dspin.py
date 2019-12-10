@@ -93,6 +93,10 @@ def setup_axes():
 		axes[i].set_ylim(ylim) 
 		axes[i].plot(xlim[i], 2 * [0], linestyle = ':', 
 			c = plots.mpltoolkit.named_colors()["black"]) 
+		axes[i].plot(xlim[i], 2 * [0.1], linestyle = ':', 
+			c = plots.mpltoolkit.named_colors()["dodgerblue"]) 
+		axes[i].plot(xlim[i], 2 * [-0.1], linestyle = ':', 
+			c = plots.mpltoolkit.named_colors()["dodgerblue"]) 
 		axes[i].plot(2 * [0], ylim, linestyle = ':', 
 			c = plots.mpltoolkit.named_colors()["black"]) 
 	axes[0].set_ylabel(r"$\Delta\lambda/\lambda$") 
