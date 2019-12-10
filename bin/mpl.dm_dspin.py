@@ -91,7 +91,7 @@ def setup_axes():
 		axes[i].set_xlabel(xlabels[i]) 
 		axes[i].set_xlim(xlim[i]) 
 		axes[i].set_ylim(ylim[i]) 
-		axes[i].plot(xlim, 2 * [0], linestyle = ':', 
+		axes[i].plot(xlim[i], 2 * [0], linestyle = ':', 
 			c = plots.mpltoolkit.named_colors()["black"]) 
 		axes[i].plot(2 * [0], ylim, linestyle = ':', 
 			c = plots.mpltoolkit.named_colors()["black"]) 
