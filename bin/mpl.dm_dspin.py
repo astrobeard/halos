@@ -32,10 +32,10 @@ for i in DATA:
 		dm_over_m[n] = j[3] / j[2] 
 		dspin_over_spin[n] = j[-1] / j[-2] 
 		dcvir_over_cvir[n] = j[5] / j[4] 
-		dca_over_dca[n] = j[9] / j[8] 
+		dca_over_ca[n] = j[9] / j[8] 
 		n += 1
 data = [list(i) for i in zip(masses, dm_over_m, dspin_over_spin, 
-	dcvir_over_cvir, dca_over_dca)] 
+	dcvir_over_cvir, dca_over_ca)] 
 
 
 def generate_ordered_subsamples(data, n): 
