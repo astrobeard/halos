@@ -83,14 +83,14 @@ def setup_axes():
 	xlabels = [r"$\Delta M_\text{vir}/M_\text{vir}$", 
 		r"$\Delta c_\text{vir}/c_\text{vir}$", 
 		r"$\Delta(c/a)/(c/a)$"] 
-	xlim = [[-0.12, 0.24], [-0.65, 0.25], [-0.65, 0.15]] 
+	xlim = [[-0.12, 0.24], [-1.4, 0.7], [-0.9, 0.5]] 
 	ylim = [-0.8, 0.8] 
 	axes = 3 * [None] 
 	for i in range(len(axes)): 
 		axes[i] = fig.add_subplot(131 + i, facecolor = "white") 
 		axes[i].set_xlabel(xlabels[i]) 
-		# axes[i].set_xlim(xlim[i]) 
-		# axes[i].set_ylim(ylim) 
+		axes[i].set_xlim(xlim[i]) 
+		axes[i].set_ylim(ylim) 
 		axes[i].plot(xlim[i], 2 * [0], linestyle = ':', 
 			c = plots.mpltoolkit.named_colors()["black"]) 
 		axes[i].plot(2 * [0], ylim, linestyle = ':', 
