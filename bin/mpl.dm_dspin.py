@@ -113,9 +113,9 @@ def legend(ax, colors, labels):
 	lines = len(colors) * [None] 
 	for i in range(len(colors)): 
 		lines[i] = ax.plot([0, 0.1], [0, 0.1], label = labels[i], 
-			c = plots.mpltoolkit.named_colors()[colors[i]])[0] 
+			c = plots.mpltoolkit.named_colors()["white"])[0] 
 	leg = ax.legend(loc = plots.mpltoolkit.mpl_loc("lower left"), ncol = 1, 
-		frameon = False, handlelength = 0, fontsize = 20) 
+		frameon = False, handlelength = 0, fontsize = 25) 
 	for i in range(len(lines)): 
 		lines[i].remove() 
 		leg.get_texts()[i].set_color(colors[i]) 
