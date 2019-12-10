@@ -89,8 +89,8 @@ def setup_axes():
 	for i in range(len(axes)): 
 		axes[i] = fig.add_subplot(131 + i, facecolor = "white") 
 		axes[i].set_xlabel(xlabels[i]) 
-		axes[i].set_xlim(xlim[i]) 
-		axes[i].set_ylim(ylim) 
+		# axes[i].set_xlim(xlim[i]) 
+		# axes[i].set_ylim(ylim) 
 		axes[i].plot(xlim[i], 2 * [0], linestyle = ':', 
 			c = plots.mpltoolkit.named_colors()["black"]) 
 		axes[i].plot(2 * [0], ylim, linestyle = ':', 
