@@ -83,10 +83,18 @@ def setup_axes():
 	xlabels = [r"$\Delta M_\text{vir}/M_\text{vir}$", 
 		r"$\Delta c_\text{vir}/c_\text{vir}$", 
 		r"$\Delta(c/a)/(c/a)$"] 
+	xlim = [[-0.12, 0.24], [-0.65, 0.25], [-0.65, 0.15]] 
+	ylim = [-0.8, 0.8] 
 	axes = 3 * [None] 
 	for i in range(len(axes)): 
 		axes[i] = fig.add_subplot(131 + i, facecolor = "white") 
 		axes[i].set_xlabel(xlabels[i]) 
+		axes[i].set_xlim(xlim[i]) 
+		axes[i].set_ylim(ylim[i]) 
+		axes[i].plot(xlim, 2 * [0], linestyle = ':', 
+			c = plots.mpltoolkit.named_colors()["black"]) 
+		axes[i].plot(2 * [0], ylim, linestyle = ':', 
+			c = plots.mpltoolkit.named_colors()["black"]) 
 	axes[0].set_ylabel(r"$\Delta\lambda/\lambda$") 
 	for i in range(1, len(axes)): 
 		plt.setp(axes[i].get_yticklabels(), visible = False) 
@@ -106,7 +114,7 @@ def legend(ax, colors, labels):
 	for i in range(len(colors)): 
 		lines[i] = ax.plot([0, 0.1], [0, 0.1], label = labels[i], 
 			c = plots.mpltoolkit.named_colors()[colors[i]])[0] 
-	leg = ax.legend(loc = plots.mpltoolkit.mpl_loc("lower right"), ncol = 1, 
+	leg = ax.legend(loc = plots.mpltoolkit.mpl_loc("lower left"), ncol = 1, 
 		frameon = False, handlelength = 0, fontsize = 20) 
 	for i in range(len(lines)): 
 		lines[i].remove() 
@@ -135,8 +143,9 @@ if __name__ == "__main__":
 		x, y, low, high = mass_range(data, [11.9, 12.9, 13.9, 1][i], 
 			[12.1, 13.1, 14.1, 100][i], 4, nbins = nbins) 
 		plot_relation(axes[2], x, y, low, high, colors[i]) 
-	plt.subplots_adjust(wspace = 0) 
+	legend(axes[1], colors, labels) 
 	plt.tight_layout() 
+	plt.subplots_adjust(wspace = 0) 
 	plt.savefig("dm_dspin.pdf") 
 	plt.clf() 
 
