@@ -41,8 +41,8 @@ data = [list(i) for i in zip(masses, dm_over_m, dspin_over_spin,
 	dcvir_over_cvir, dca_over_ca)] 
 
 
-def generate_ordered_subsamples(data, n): 
-	indeces = np.argsort([row[1] for row in data]).tolist() 
+def generate_ordered_subsamples(data, n, xcol): 
+	indeces = np.argsort([row[xcol] for row in data]).tolist() 
 	data = [data[i] for i in indeces] 
 	x = int(len(data) / n) 
 	subs = n * [None] 
@@ -68,7 +68,7 @@ def analyze(sub, xcol):
 def mass_range(data, minlogm, maxlogm, xcol, nbins = 100): 
 	filtered = list(filter(lambda x: minlogm <= m.log10(x[0]) <= maxlogm, 
 		data)) 
-	ordered = generate_ordered_subsamples(filtered, nbins) 
+	ordered = generate_ordered_subsamples(filtered, nbins, xcol) 
 	x = len(ordered) * [0] 
 	y = len(ordered) * [0] 
 	low = len(ordered) * [0] 
