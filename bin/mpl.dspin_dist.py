@@ -24,7 +24,7 @@ n = 0
 for i in DATA: 
 	for j in i: 
 		masses[n] = j[2] 
-		dspin_over_spin = j[-1] / j[-2] 
+		dspin_over_spin[n] = j[-1] / j[-2] 
 		n += 1
 data = [list(i) for i in zip(masses, dspin_over_spin)] 
 
