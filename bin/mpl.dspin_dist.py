@@ -45,7 +45,7 @@ def get_dspin_distribution(mass_sub, nbins = 1000):
 	# 	max([row[1] for row in mass_sub]), 
 	# 	n_bins + 1) 
 	return [i.tolist() for i in np.histogram([row[1] for row in mass_sub], 
-		bins = nbins, range = (-5, 1))] 
+		bins = nbins, range = (-2, 1))] 
 
 def get_dspin_rms(mass_sub): 
 	return m.sqrt(np.mean([i**2 for i in [row[1] for row in mass_sub]])) 
@@ -65,7 +65,7 @@ if __name__ == "__main__":
 	plot_dspin_distribution(ax, 13.9, 14.1, "dodgerblue") 
 	plot_dspin_distribution(ax, 1, 100, "black") 
 	leg = ax.legend(loc = plots.mpltoolkit.mpl_loc("upper left"), ncol = 1, 
-		frameon = False) 
+		frameon = False, handlelength = 0) 
 	for i in leg.legendHandles: 
 		i.set_visible(False) 
 	for i in range(4): 
