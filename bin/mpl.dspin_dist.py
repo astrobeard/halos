@@ -62,12 +62,14 @@ if __name__ == "__main__":
 	ax = setup_axis() 
 	plot_dspin_distribution(ax, 11.9, 12.1, "crimson") 
 	plot_dspin_distribution(ax, 12.9, 13.1, "lime") 
-	plot_dspin_distribution(ax, 13.9, 14.1, "deepskyblue") 
+	plot_dspin_distribution(ax, 13.9, 14.1, "dodgerblue") 
 	plot_dspin_distribution(ax, 1, 100, "black") 
 	leg = ax.legend(loc = plots.mpltoolkit.mpl_loc("upper right"), ncol = 1, 
 		frameon = False) 
 	for i in leg.legendHandles: 
 		i.set_visible(False) 
+	for i in range(4): 
+		leg.get_texts()[i].set_color(["crimson", "lime", "dodgerblue", "black"][i]) 
 	plt.tight_layout() 
 	plt.savefig("dspin_dist.pdf") 
 	plt.clf() 
