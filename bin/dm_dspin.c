@@ -86,9 +86,9 @@ static void write_halo(FILE *out, HALO *root, HALO *progenitor) {
 	fprintf(out, "%ld\t", (*root).pid); 
 	fprintf(out, "%.5e\t", (*root).mvir); 
 	fprintf(out, "%.5e\t", (*root).mvir - (*progenitor).mvir); 
-	fprintf(out, "%.5e\t", (*root).rvir / (*root).rs); 
-	fprintf(out, "%.5e\t", (*root).rvir / (*root).rs - 
-		(*progenitor).rvir / (*progenitor).rs); 
+	fprintf(out, "%.5e\t", (*root).rvir / (*root).rs_klypin); 
+	fprintf(out, "%.5e\t", (*root).rvir / (*root).rs_klypin - 
+		(*progenitor).rvir / (*progenitor).rs_klypin); 
 	fprintf(out, "%.5e\t", (*root).b_to_a); 
 	fprintf(out, "%.5e\t", (*root).b_to_a - (*progenitor).b_to_a); 
 	fprintf(out, "%.5e\t", (*root).c_to_a); 
@@ -179,8 +179,8 @@ static HALO *readline(FILE *tree, const unsigned short dimension) {
 			case SPIN_BULLOCK_COLUMN: 
 				halo -> spin_bullock = dummy; 
 				break; 
-			case RS_COLUMN: 
-				halo -> rs = dummy; 
+			case RS_KLYPIN_COLUMN: 
+				halo -> rs_klypin = dummy; 
 				break; 
 			case RVIR_COLUMN: 
 				halo -> rvir = dummy; 
