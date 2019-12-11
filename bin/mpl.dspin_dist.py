@@ -37,6 +37,7 @@ def setup_axis():
 	ax = fig.add_subplot(111, facecolor = "white") 
 	ax.set_xlabel(r"$\Delta\lambda/\lambda$") 
 	ax.set_ylabel("PDF") 
+	ax.set_yscale("log") 
 	return ax 
 
 def get_dspin_distribution(mass_sub, nbins = 1000): 
@@ -44,7 +45,7 @@ def get_dspin_distribution(mass_sub, nbins = 1000):
 	# 	max([row[1] for row in mass_sub]), 
 	# 	n_bins + 1) 
 	return [i.tolist() for i in np.histogram([row[1] for row in mass_sub], 
-		bins = nbins)] 
+		bins = nbins, range = (-1, 1))] 
 
 def get_dspin_rms(mass_sub): 
 	return m.sqrt(np.mean([i**2 for i in [row[1] for row in mass_sub]])) 
