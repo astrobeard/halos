@@ -55,7 +55,7 @@ def plot_dspin_distribution(ax, minlogm, maxlogm, color, nbins = 100):
 	hist, bins = get_dspin_distribution(mass_sub) 
 	centers = list(map(lambda x, y: (x + y) / 2, bins[1:], bins[:-1])) 
 	ax.plot(centers, hist, c = plots.mpltoolkit.named_colors()[color], 
-		label = "rms = %.2e" % (get_dspin_rms(mass_sub))) 
+		label = "rms = %.3f" % (get_dspin_rms(mass_sub))) 
 	
 if __name__ == "__main__": 
 	plt.clf() 
